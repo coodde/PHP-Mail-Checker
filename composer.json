@@ -1,5 +1,6 @@
 {
     "name": "coodde/mail-checker",
+    "version": 0.1.0,
     "description": "Flexible PHP package for complex mail validation",
     "keywords": ["php", "email", "validator", "checker", "package"],
     "license": "MIT",
