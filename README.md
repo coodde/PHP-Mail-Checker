@@ -1,4 +1,3 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
@@ -31,9 +30,9 @@
     This package provides simple checker for emails, to validate mail providers.
     <br />
     <br />
-    <a href="https://github.com/coodde/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/coodde/PHP-Mail-Checker/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/coodde/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/coodde/PHP-Mail-Checker/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -127,9 +126,9 @@ _Below is an simple list of step to install library._
 
 1. Open your project directory in the terminal
 2. Install package
-   ```bash
-  composer require coodde/mail-checker
-   ```
+```bash
+composer require coodde/mail-checker
+```
 3. Check your `composer.json` file
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -290,6 +289,27 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
+✅ Run refactors using **Rector**
+```bash
+composer refacto
+```
+
+⚗️ Run static analysis using **PHPStan**:
+```bash
+composer test:types
+```
+
+✅ Run unit tests using **PEST**
+```bash
+composer test:unit
+```
+
+🚀 Run the entire test suite:
+```bash
+composer test
+```
+
 ### Top contributors:
 
 <a href="https://github.com/coodde/PHP-Mail-Checker/graphs/contributors">
@@ -321,18 +341,18 @@ Platform Link: [https://coodde.com](https://coodde.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/coodde/PHP-Mail-Checker.svg?style=for-the-badge
+[contributors-url]: https://github.com/coodde/PHP-Mail-Checker/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/coodde/PHP-Mail-Checker.svg?style=for-the-badge
+[forks-url]: https://github.com/coodde/PHP-Mail-Checker/network/members
+[stars-shield]: https://img.shields.io/github/stars/coodde/PHP-Mail-Checker.svg?style=for-the-badge
+[stars-url]: https://github.com/coodde/PHP-Mail-Checker/stargazers
+[issues-shield]: https://img.shields.io/github/issues/coodde/PHP-Mail-Checker.svg?style=for-the-badge
+[issues-url]: https://github.com/coodde/PHP-Mail-Checker/issues
+[license-shield]: https://img.shields.io/github/license/coodde/PHP-Mail-Checker.svg?style=for-the-badge
+[license-url]: https://github.com/coodde/PHP-Mail-Checker/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/groups/12553924/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -350,32 +370,3 @@ Platform Link: [https://coodde.com](https://coodde.com)
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
-
-
-
-
-
-
-
-
-✅ Run refactors using **Rector**
-```bash
-composer refacto
-```
-
-⚗️ Run static analysis using **PHPStan**:
-```bash
-composer test:types
-```
-
-✅ Run unit tests using **PEST**
-```bash
-composer test:unit
-```
-
-🚀 Run the entire test suite:
-```bash
-composer test
-```
-
-**Skeleton PHP** was created by **[Nuno Maduro](https://twitter.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
