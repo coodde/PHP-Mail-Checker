@@ -14,7 +14,7 @@ final class File
         $filepath = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'data', "$listing.csv"]);
         $file = new SplFileObject($filepath);
         $file->seek($file->getSize());
-        
+
         $leftPointer = 0;
         $rightPointer = $file->key() - 1;
         $midPointer = 0;
@@ -32,6 +32,7 @@ final class File
 
             if ($rightPointer - $leftPointer <= 1) {
                 $file->next();
+
                 return rtrim($file->current()) === $domain; // @phpstan-ignore argument.type
             }
             $midPointer = (int) floor(($leftPointer + $rightPointer) / 2);

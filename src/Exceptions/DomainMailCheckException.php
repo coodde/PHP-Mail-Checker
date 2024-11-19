@@ -2,7 +2,4 @@
 
 namespace Coodde\MailChecker\Exceptions;
 
-class DomainMailCheckException extends MailCheckException
-{
-
-}
+class DomainMailCheckException extends MailCheckException {}

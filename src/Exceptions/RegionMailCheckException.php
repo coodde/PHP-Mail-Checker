@@ -2,7 +2,4 @@
 
 namespace Coodde\MailChecker\Exceptions;
 
-class RegionMailCheckException extends MailCheckException
-{
-
-}
+class RegionMailCheckException extends MailCheckException {}

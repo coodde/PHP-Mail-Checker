@@ -1,11 +1,9 @@
 <?php
 
+use Coodde\MailChecker\Exceptions\ListingMailCheckException;
+use Coodde\MailChecker\Exceptions\MailCheckException;
 use Coodde\MailChecker\MailChecker;
 use Coodde\MailChecker\Regions;
-use Coodde\MailChecker\Exceptions\MailCheckException;
-use Coodde\MailChecker\Exceptions\DomainMailCheckException;
-use Coodde\MailChecker\Exceptions\ListingMailCheckException;
-use Coodde\MailChecker\Exceptions\RegionMailCheckException;
 
 describe('validation with exceptions', function (): void {
     it('invalid email exception', function (): void {
@@ -31,7 +29,7 @@ describe('checkink mail categories allowed', function (): void {
     });
 
     it('dangerous email', function (): void {
-        $mailChecker = new MailChecker();
+        $mailChecker = new MailChecker;
 
         $result = $mailChecker->allowed('test@0-00.usa.cc');
         expect($result)->toBe(false);
@@ -73,7 +71,7 @@ describe('checkink mail categories allowed', function (): void {
 
     it('paid category', function (): void {
         $mailChecker = new MailChecker([MailChecker::CATEGORY_PAID]);
-        
+
         $result = $mailChecker->allowed('test@zoho.com');
         expect($result)->toBe(false);
 
@@ -83,7 +81,7 @@ describe('checkink mail categories allowed', function (): void {
 
     it('temp category', function (): void {
         $mailChecker = new MailChecker([MailChecker::CATEGORY_TEMPORARY]);
-        
+
         $result = $mailChecker->allowed('test@bund.us');
         expect($result)->toBe(false);
 
@@ -93,7 +91,7 @@ describe('checkink mail categories allowed', function (): void {
 
     it('public category', function (): void {
         $mailChecker = new MailChecker([MailChecker::CATEGORY_PUBLIC]);
-        
+
         $result = $mailChecker->allowed('test@gmail.com');
         expect($result)->toBe(false);
 
@@ -104,8 +102,8 @@ describe('checkink mail categories allowed', function (): void {
 
 describe('checkink mail regions allowed', function (): void {
     it('default regions', function (): void {
-        $mailChecker = new MailChecker();
-        
+        $mailChecker = new MailChecker;
+
         $result = $mailChecker->allowed('test@mail.ru');
         expect($result)->toBe(false);
 
@@ -115,7 +113,7 @@ describe('checkink mail regions allowed', function (): void {
 
     it('forbidden region', function (): void {
         $mailChecker = new MailChecker([], [], [Regions::RUSSIA]);
-        
+
         $result = $mailChecker->allowed('test@mail.ru');
         expect($result)->toBe(false);
 
@@ -127,7 +125,7 @@ describe('checkink mail regions allowed', function (): void {
 describe('checkink mail domains allowed', function (): void {
     it('forbidden domains', function (): void {
         $mailChecker = new MailChecker([], ['ru', 'mail.by']);
-        
+
         $result = $mailChecker->allowed('test@mail.ru');
         expect($result)->toBe(false);
 
