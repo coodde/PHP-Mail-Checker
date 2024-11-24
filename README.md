@@ -1,4 +1,4 @@
-<img src="images/header.png" alt="header">
+<img src="images/header.jpg" alt="header">
 
 <a id="readme-top"></a>
 
