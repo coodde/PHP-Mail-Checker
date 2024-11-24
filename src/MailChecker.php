@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Coodde\MailChecker;
 
-use Coodde\MailChecker\Adapters\File;
+use Coodde\MailChecker\Adapters\AdapterFactory;
+use Coodde\MailChecker\Adapters\AdapterInterface;
+use Coodde\MailChecker\Adapters\AdapterType;
 use Coodde\MailChecker\Exceptions\DomainMailCheckException;
 use Coodde\MailChecker\Exceptions\ListingMailCheckException;
 use Coodde\MailChecker\Exceptions\MailCheckException;
@@ -43,6 +45,8 @@ final class MailChecker
      */
     private array $regions;
 
+    private AdapterInterface $adapter;
+
     /**
      * @param  array<int, string>  $categories
      * @param  array<int, string>  $domains
@@ -54,6 +58,8 @@ final class MailChecker
         $this->domains = $domains ?? [];
         // Default list of dangerous and/or terrorist regions to forbid ;)
         $this->regions = $regions ?? ['ru', 'by', 'kp', 'af', 'ir', 'sy', 'su', 'cu'];
+        // Hardcoded type until another adapters are added
+        $this->adapter = AdapterFactory::create(AdapterType::FILE);
     }
 
     /**
@@ -142,7 +148,7 @@ final class MailChecker
     private function categoriesAllowed(string $mailDomain): bool
     {
         foreach ($this->categories as $category) {
-            $found = File::search($mailDomain, $category);
+            $found = $this->adapter->search($mailDomain, $category);
             if ($found) {
                 return false;
             }
