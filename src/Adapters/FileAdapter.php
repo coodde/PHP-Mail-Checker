@@ -7,9 +7,9 @@ use SplFileObject;
 /**
  * @internal
  */
-final class File
+final class FileAdapter implements AdapterInterface
 {
-    public static function search(string $domain, string $listing): bool
+    public function search(string $domain, string $listing): bool
     {
         $filepath = implode(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'data', "$listing.csv"]);
         $file = new SplFileObject($filepath);

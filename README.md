@@ -1,3 +1,5 @@
+<img src="images/header.png" alt="header">
+
 <a id="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
@@ -75,7 +77,15 @@ It can check is mail:
 * registered in forbidden domain (all possible levels);
 * used for spam or scam (dangerous), temporary, had suspicious behaviour, is registered on paid or public (like gmail) mail provider.
 
-Of course, you can always propose new domains listed in the "data" directory.
+Of course, you can always propose new domains to add into listed in the "data" directory.
+
+Key feautures:
+* fast search - binary search in the pre-sorted dictionaries (in comparison with other popular libraries with linear search)
+* flexible configurations - not only one strict list
+* low memory usage - disctionaries are not loaded fully into memory (as in other popular libraries)
+* frequent updates
+* easy collaboration
+* large disctionary- 60k+ of domains (not only public email providers) in the dictionary
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,7 +97,7 @@ This library supports several languages and frameworks.
 
 * PHP
   * Vanilla
-  * [![Laravel][Laravel.com]][Laravel-url] (planned)
+  * [![Laravel][Laravel.com]][Laravel-url]
   * Symfony (planned)
   * Phalcon (planned)
 * JS / TS
@@ -365,7 +375,7 @@ Platform Link: [https://coodde.com](https://coodde.com)
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
+[Laravel-url]: https://github.com/coodde/Laravel-Email-Checker
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
